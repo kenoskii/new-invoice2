@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Mima Receipt Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        margin: 0;
+        background-color: #cccccc;
+      }
+
+      table {
+        border-spacing: 0;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+      }
+
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #cccccc;
+        padding-bottom: 60px;
+      }
+
+      .main {
+        background-color: #e5e5e5;
+        margin: 0 auto;
+        max-width: 600px;
+        border-spacing: 0;
+        font-family: "Montserrat";
+        color: #4a4a68;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .two-column {
+        text-align: center;
+      }
+
+      .two-column .column {
+        width: 100%;
+        max-width: 300px;
+        display: inline;
+        vertical-align: top;
+        text-align: justify;
+      }
+
+      .row1,
+      .row2,
+      .row3 {
+        display: inline;
+        table-layout: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center class="wrapper">
+      <table class="main" width="100%">
+        <!--logohead-->
+        <tr>
+          <td style="background-color: #1f68d6">
+            <table width="100%">
+              <tr>
+                <td style="text-align: center; padding: 20px 0 15px">
+                  <p>
+                    <a href="https://imgbb.com/"
+                      ><img
+                        src="https://i.ibb.co/8s6yKXg/Vector.png"
+                        border="0"
+                    /></a>
+                  </p>
+                  <p style="color: #e5e5e5; font-size: 32px">Invoice</p>
+                  <p style="color: #e5e5e5; font-size: 18px">{{createdAt}}</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--figureline-->
+        <tr>
+          <td
+            style="
+              border-top: 1px;
+              border-bottom: 1px;
+              border-style: solid;
+              border-color: #d1d1d1;
+            "
+          >
+            <table width="100%">
+              <tr>
+                <td style="text-align: center">
+                  <p>#{{number}}</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!--top-->
+        <tr>
+          <td style="padding: 30px 0 32px">
+            <table width="100%">
+              <tr>
+                <td class="two-column">
+                  <table class="column" width="100%">
+                    <tr>
+                      <td style="padding: 0 30px 10px 20px" width="230px">
+                        <p style="font-weight: 700; line-height: 21px">
+                          {{business.tradingName}}
+                        </p>
+                        <p>
+                          {{business.address}}
+                        </p>
+                        <p>
+                          <a href="https://imgbb.com/"
+                            ><img
+                              src="https://i.ibb.co/gyNF7zc/call-24px.png"
+                              border="0" /></a
+                          ><span style="padding-left: 4px">{{business.mobile}}</span>
+                        </p>
+                        <p>
+                          <a href="https://imgbb.com/"
+                            ><img
+                              src="https://i.ibb.co/zhxrMv8/email-24px.png"
+                              border="0"
+                          /></a>
+                          <span style="padding-left: 4px"
+                            >{{business.email}}</span
+                          >
+                        </p>
+                         <p>                          
+                         <img
+                              src="https://img.icons8.com/material-outlined/24/000000/home--v2.png"
+                              width="17"
+                              border="0"
+                          />{{business.businessAddress}}</p>
+                        <table class="column">
+                          <tr>
+                            <td style="padding: 10px 20px 0 20px" width="240px">
+                              <img
+                              src={{business.logoUrl}}
+                               width="100"
+                               height="40"
+                              border="0"
+                          />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="column">
+                    <tr>
+                      <td style="padding: 10px 20px 0 20px" width="240px">
+                        <p>Bank:<strong> {{business.bankAccount.bank}}</strong></p>
+                        <p>
+                          Account Name:<strong>
+                            {{business.bankAccount.accountName}}</strong
+                          >
+                        </p>
+                        <p>Account Number:<strong> {{business.bankAccount.accountNumber}}</strong></p>
+                        <p
+                          style="
+                            color: #3b7ee3;
+                            line-height: 17px;
+                            font-weight: 700;
+                            font-size: 14px;
+                          "
+                        >
+                          Or
+                        </p>
+                        <a href={{paymentUrl}}> <button
+                          style="
+                            background-color: #696365;
+                            width: 205px;
+                            height: 60px;
+                            border-radius: 10px;
+                            font-size: 18px;
+                            color: #fbfcfe;
+                          "
+                        >
+                          Click Here to Pay
+                        </button></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--hr-->
+        <tr>
+          <td>
+            <table width="90%" align="center">
+              <tr>
+                <td>
+                  <hr style="border: 1.5px solid #1f68d6; height: 0" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!--bottom-->
+        <tr>
+          <td style="padding: 30px 0 32px">
+            <table width="100%">
+              <tr>
+                <td class="two-column">
+                  <table class="column" width="100%">
+                    <tr>
+                      <td style="padding: 0 30px 10px 20px" width="230px">
+                        <p
+                          style="
+                            font-weight: 700;
+                            font-size: 12px;
+                            line-height: 21px;
+                          "
+                        >
+                          Bill To
+                        </p>
+                        <p>{{customer.fullname}}</p>
+                        <p>{{customer.address}}</p>
+                        <p>
+                          <a href="https://imgbb.com/"
+                            ><img
+                              src="https://i.ibb.co/gyNF7zc/call-24px.png"
+                              border="0"
+                          /></a>
+                          <span style="padding-left: 4px">{{customer.mobile}}</span>
+                        </p>
+                        <p>
+                          <a href="https://imgbb.com/"
+                            ><img
+                              src="https://i.ibb.co/zhxrMv8/email-24px.png"
+                              border="0"
+                          /></a>
+                          <span style="padding-left: 4px"
+                            >{{customer.email}}</span
+                          >
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="column">
+                    <tr>
+                      <td style="padding: 10px 20px 47px 20px" width="240px">
+                        <p>
+                          Invoice Date:<strong
+                            style="
+                              font-weight: 700;
+                              font-size: 12px;
+                              padding-left: 10px;
+                            "
+                            >{{createdAt}}</strong
+                          >
+                        </p>
+                        <p>
+                          Due Date:<strong
+                            style="
+                              font-weight: 700;
+                              font-size: 12px;
+                              padding-left: 10px;
+                            "
+                            >{{dueDate}}</strong
+                          >
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!--row1-->
+
+        <tr>
+          <td align="center">
+            <table width="90%" style="text-align: center">
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: #1f68d6;
+                    line-height: 37px;
+                    color: #fbfcfe;
+                    font-size: 10px;
+                  "
+                >
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>Service</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>Price</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>Qty</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>Total</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!--row2-->
+        {{#each orders}}
+        <tr>
+          <td align="center">
+            <table width="90%" style="text-align: center">
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-around;
+                    line-height: 37px;
+                    font-size: 10px;
+                    border: 1px solid #d1d1d1;
+                  "
+                >
+                  <table width="25%">
+                    <tr>
+                      <td>
+                    <span>{{this.item}}</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>{{currency.symbol}}{{this.unitPrice}}</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>{{this.quantity}}</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="25%">
+                    <tr>
+                      <td>
+                        <span>{{currency.symbol}}{{this.itemPrice}}</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+{{/each}}
+        <!--total-->
+        <tr>
+          <td>
+            <table width="90%" align="center">
+              <tr>
+                <td style="text-align: end; font-size: 10px">
+                  <p>
+                    Sub Total<strong
+                      style="
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                      "
+                      >{{currency.symbol}}{{itemsTotalAmount}}</strong
+                    >
+                  </p>
+                  <p>
+                    Discount<strong
+                      style="
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                      "
+                      >{{currency.symbol}}{{discountAmount}}</strong
+                    >
+                  </p>
+                   <p>
+                    Shipping Fee<strong
+                      style="
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                      "
+                      >{{currency.symbol}}{{shipping}}</strong
+                    >
+                  </p>
+                  <p>
+                    Tax %<strong
+                      style="
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                      "
+                      >{{currency.symbol}}{{tax.amount}}</strong
+                    >
+                  </p>
+                  <p>
+                    Grand Total<strong
+                      style="
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                      "
+                      >{{currency.symbol}}{{transactionAmount}}</strong
+                    >
+                  </p>
+                  <p>
+                    Expected Deposit<strong
+                      style="
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-left: 10px;
+                      "
+                      >{{currency.symbol}}{{deposit}}</strong
+                    >
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+        <!--invoicemsg-->
+        <tr>
+          <td>
+            <table width="100%" align="center">
+              <tr>
+                <td
+                  style="
+                    background-color: #eef2f5;
+                    height: 40px;
+                    text-align: center;
+                    color: #000000;
+                    font-size: 14px;
+                  "
+                >
+                  <p>
+                    Invoice was created on a computer and is valid without the
+                    signature and seal.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!--footer-->
+        <tr>
+            <td style="background-color: #1f68d6">
+              <table width="100%" align="center">
+                <tr>
+                  <p style="height: 30px;"><strong
+                        style="
+                          font-size: 15px;
+                          font-weight: 200;
+                          padding-left: 200px;
+                          color: #fbfcfe
+                        "
+                        >Powered By </strong><img
+                          src="https://i.ibb.co/k1DGbjv/Mima-light-logo-1-1.png"
+                          width="100"
+                          border="0"
+                      />
+                    </p>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      </table>
+    </center>
+  </body>
+</html>
